@@ -23,6 +23,7 @@ public class AppTest {
         String result = triangle.get_type().toString();
         assertEquals(expected, result.toString());
     }
+	//jkjk
 	@Test
 	public void check_Scalene(){
         int a = 2;
