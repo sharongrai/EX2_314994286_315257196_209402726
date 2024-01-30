@@ -30,8 +30,6 @@ public class AppTest {
         TriangleClassifier.classifyTriangle(a,b,c);
         String expected =Triangle_Types.Nottriangle.toString();
         String result = TriangleClassifier.get_type().toString();
-        System.out.println(result);
-        System.out.println(expected);
         assertEquals(expected, result.toString());
 	}
 	@Test //2
