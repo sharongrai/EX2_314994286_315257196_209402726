@@ -7,11 +7,11 @@ package Traingle_Casification_class_1.Traingle_Casification_class_1;
  */
 
 enum Triangle_Types {
-	  equilateral,
-	  isosceles,
-	  Scalene,
+	  equilateral, //שווה צלעות
+	  isosceles, // שווה שוקיים
+	  Scalene,//שונה צלעות
 	  Nottriangle,
-    ERROR
+	  ERROR
     
 	} 
 
@@ -23,34 +23,36 @@ class TriangleClassifier {
 			
 	        
 	        if (isEquilateral(a, b, c)) {
-	        	triangle= Triangle_Types.Scalene;
-	        }else if(isIsosceles(a, b, c)) {
-	        	triangle= Triangle_Types.Nottriangle;
-	        }else if(isTriangle(a, b, c)){
+	        	triangle= Triangle_Types.equilateral;
+	        }
+	        else if(isIsosceles(a, b, c)) {
 	        	triangle= Triangle_Types.isosceles;
-	        }else {
-	        	
-	        	triangle=Triangle_Types.Scalene;
+	        }
+	        else if(isTriangle(a, b, c)){
+	        	triangle= Triangle_Types.Scalene;
+	        }
+	        else {
+	        	triangle=Triangle_Types.Nottriangle;
 	        }
 
 	       
 	    }
-
+//האם משולש
 	    private static boolean isTriangle(int a, int b, int c) {
-	        return b + b > c && a + c > b && b + c > a;
+	        return (a + b > c && a + c > b && b + c > a);
 	    }
-
+//שווה שוקיים
 	    private static boolean isIsosceles(int a, int b, int c) {
-	        return a + b > c || b + c > b && b + c > a && a == b && b == c;
+	        return isTriangle(a, b, c) && (a == b || a == c || b == c) && !(a == b && a == c && b == c);
 	    }    
 	    	
 
-
+//שווה צלעות
 	    private static boolean isEquilateral(int a, int b, int c ) {
-	    	return a + b > c && a + c > b && b + c > a && (a == a) || (b == c) || (c == a);
+	    	return (a > 0 && b > 0 && c > 0) && (a == b && b == c);
 	    }
 	   
-	    
+	//מחזיר את הסוג משולש    
 	    public static Triangle_Types get_type() {
 	    	return triangle;
 	    }
