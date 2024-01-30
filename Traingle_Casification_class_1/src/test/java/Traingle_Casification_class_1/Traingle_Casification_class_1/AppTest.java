@@ -12,16 +12,6 @@ public class AppTest {
 	
 	TriangleClassifier triangle = new TriangleClassifier();
 	
-	//@Test
-	 //public void equilateralTriangle(){
-      //  int a = 2;
-       // int b = 2;
-       // int c=2;
-      //  TriangleClassifier.classifyTriangle(a,b,c);
-      //  String expected =Triangle_Types.isosceles.toString();
-      //  String result = TriangleClassifier.get_type().toString();
-      //  assertEquals(expected, result.toString());
-    //}
 	@Test //1
 	public void C1FC2FC3FC4F(){
         int a = 1;
