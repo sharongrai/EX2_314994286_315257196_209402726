@@ -12,7 +12,7 @@ public class AppTest {
 	
 	TriangleClassifier triangle = new TriangleClassifier();
 	
-	@Test //1
+	@Test //TestCase 1
 	public void C1FC2FC3FC4F(){
         int a = 1;
         int b = 2;
@@ -52,7 +52,6 @@ public class AppTest {
         String result = TriangleClassifier.get_type().toString();
         assertEquals(expected, result.toString());
         }
-
 	@Test //9 
 	public void C1TC2FC3FC4F(){
         int a = 4;
