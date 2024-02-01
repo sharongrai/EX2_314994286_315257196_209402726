@@ -10,7 +10,7 @@ enum Triangle_Types {
 	  equilateral, //שווה צלעות
 	  isosceles, // שווה שוקיים
 	  Scalene,//שונה צלעות
-	  Nottriangle,
+	  Nottriangle, //לא משולש 
 	  ERROR
     
 	} 
